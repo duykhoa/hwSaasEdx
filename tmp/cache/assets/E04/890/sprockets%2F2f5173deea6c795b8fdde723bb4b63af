@@ -1,0 +1,39 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1375620170.0445395:@value{I"
+class:ETI"BundledAsset;
+FI"id;
+TI"%cb438c70a078e03817af469767f22fda;
+FI"logical_path;
+TI"application.js;
+FI"pathname;
+TI"0$root/app/assets/javascripts/application.js;
+FI"content_type;
+TI"application/javascript;
+TI"
+mtime;
+TI"2013-08-04T07:35:05+07:00;
+TI"	body;
+TI"—// This is a manifest file that'll be compiled into including all the files listed below.
+// Add new JavaScript/Coffee code in separate files in this directory and they'll automatically
+// be included in the compiled file accessible from http://example.com/assets/application.js
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+;
+;
+TI"asset_paths;
+T[I"0$root/app/assets/javascripts/application.js;
+FI"dependency_paths;
+T[{I"	path;
+TI"0$root/app/assets/javascripts/application.js;
+FI"
+mtime;
+TIu:	TimeÄ\ÄóoPå
+:nano_numiW:nano_deni:submicro"Yê:offsetipb:	zoneI"ICT;
+TI"hexdigest;
+TI"%96050a843252264ace1d55ab3d4aff44;
+FI"_version;
+TI"%1c9609bc58b1e77c196de29021583379;
+F
