@@ -1,2 +1,3 @@
-/public/assets/*
-/tmp/*
+public/assets
+tmp
+log
