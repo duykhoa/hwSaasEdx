@@ -1,8 +1,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: white;
-  color: yellow;
+  background: White;
+  color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
 }
@@ -22,14 +22,14 @@ h1 {
   font-style: italic;
   display: block;
   width: 100%;
-  border-bottom: 1px solid yellow;
+  border-bottom: 1px solid DarkSlateGrey;
 }
 h1.title {
   margin: 0 0 1em;
   padding: 10px;
   background-color: orange;
   color: white;
-  border-bottom: 4px solid blue;
+  border-bottom: 4px solid gold;
   font-size: 2em;
   font-style: normal;
 }
@@ -42,14 +42,14 @@ table#movies {
 table#movies th {
   border: 2px solid white;
   font-weight: bold;
-  background-color: green;
+  background-color: wheat;
 }
 table#movies th, table#movies td {
   padding: 4px;
   text-align: left;
 }
 #notice #warning {
-  background: red;
+  background: rosybrown;
   margin: 1em 0;
   padding: 4px;
 }
