@@ -1571,3 +1571,36 @@ Served asset /application.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-04 23:38:48 +0700
 Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies?sort=title" for 127.0.0.1 at 2013-08-04 23:43:11 +0700
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" [0m
+  Rendered movies/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 36ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-04 23:43:11 +0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-04 23:43:11 +0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/movies?sort=release_date" for 127.0.0.1 at 2013-08-04 23:43:13 +0700
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" 
+  Rendered movies/index.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-04 23:43:13 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-04 23:43:13 +0700
+Served asset /application.js - 304 Not Modified (0ms)
