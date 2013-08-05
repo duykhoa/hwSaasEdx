@@ -1,4 +1,5 @@
 class MoviesController < ApplicationController
+  before_filter :check_session, only: :index
 
   def show
     id = params[:id] # retrieve movie ID from URI route
@@ -7,12 +8,13 @@ class MoviesController < ApplicationController
   end
 
   def index
-    puts params.inspect, "============"
     @all_ratings = Movie.pluck(:rating).uniq
     params[:ratings]? @movies = Movie.rating(params[:ratings].map { |key,value| key }) : @movies = Movie.all
     if params[:sort]
       @movies = @movies.sort_by(&:"#{params[:sort]}")
     end
+
+    save_session params[:sort], params[:ratings]
   end
 
   def new
@@ -41,5 +43,28 @@ class MoviesController < ApplicationController
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.title}' deleted."
     redirect_to movies_path
+  end
+
+  private
+  def check_session
+    redirect_to movies_path(params.merge(@merge_params)) if is_redirected
+  end
+
+  def save_session sort, ratings
+    session[:sort] = sort
+    session[:ratings] = ratings
+  end
+
+  def is_redirected
+    @merge_params = Hash.new()
+    if !params[:sort] && session[:sort]
+      @merge_params.merge!({sort: session[:sort]})
+      true
+    end
+
+    if !params[:ratings] && session[:ratings]
+      @merge_params.merge!({ratings: session[:ratings]})
+      true
+    end
   end
 end
