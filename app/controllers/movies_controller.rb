@@ -7,7 +7,9 @@ class MoviesController < ApplicationController
   end
 
   def index
-    @movies = Movie.all
+    puts params.inspect, "============"
+    @all_ratings = Movie.pluck(:rating).uniq
+    params[:ratings]? @movies = Movie.rating(params[:ratings].map { |key,value| key }) : @movies = Movie.all
     if params[:sort]
       @movies = @movies.sort_by(&:"#{params[:sort]}")
     end
